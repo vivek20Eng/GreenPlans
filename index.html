@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Plans - Expert Landscaping</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- ========== NAVIGATION HTML START ========== -->
+    <!-- Added backdrop element for mobile menu blur effect -->
+    <div class="nav-backdrop" id="nav-backdrop"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Green Plans Logo" class="logo-icon">
+                <span class="logo-text">Green Plans</span>
+            </div>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <button class="contact-btn">Contact Us</button>
+            </div>
+        </div>
+    </nav>
+    <!-- ========== NAVIGATION HTML END ========== -->
+
+    <!-- ========== HERO SECTION HTML START ========== -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <img src="assets/images/banner1.jpg" alt="Modern landscaped building">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Expert Landscaping<br>Hassle-Free Maintenance</h1>
+            <div class="hero-buttons">
+                <button class="btn btn-secondary">Who we are</button>
+                <button class="btn btn-primary">Get a Free Quote</button>
+            </div>
+        </div>
+    </section>
+    <!-- ========== HERO SECTION HTML END ========== -->
+
+    <!-- ========== STORY SECTION HTML START ========== -->
+    <section class="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>The Story of Green Plans</h2>
+                    <p class="story-subtitle">From design to care, we make every garden thrive beautifully & sustainably</p>
+                    <p class="story-description">
+                        At Green Plans Gardening and Landscaping, we believe every outdoor space deserves to thrive with beauty, balance, and care. With a passion for nature and years of expertise, our team specializes in creating stunning landscapes and providing reliable garden maintenance that lasts. From elegant designs to sustainable upkeep, we bring life to every corner of your lawn or garden making it a space you'll love all year round.
+                    </p>
+                    <button class="btn btn-primary">More About Us</button>
+                </div>
+                
+                <div class="story-images">
+                    <div class="image-grid">
+                        <div class="image-item large">
+                            <img src="garden-1.jpg" alt="Modern garden design">
+                        </div>
+                        <div class="image-item">
+                            <img src="garden-2.jpg" alt="Landscaped terrace">
+                        </div>
+                        <div class="image-item">
+                            <img src="garden-3.jpg" alt="Garden pathway">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== STORY SECTION HTML END ========== -->
+
+    <!-- ========== SERVICES SECTION HTML START ========== -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            
+            <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="landscape-icon.png" alt="Landscape Design Icon">
+                            </div>
+                            <h3>Landscape Design & Installation</h3>
+                            <p>Tailored designs that blend creativity with functionality, bringing harmony to your outdoor space.</p>
+                            <a href="#" class="view-more">View More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="garden-icon.png" alt="Garden Maintenance Icon">
+                            </div>
+                            <h3>Garden & Lawn Maintenance</h3>
+                            <p>Regular care, mowing, trimming, and seasonal upkeep to keep your garden fresh and green.</p>
+                            <a href="#" class="view-more">View More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="tree-icon.png" alt="Tree Care Icon">
+                            </div>
+                            <h3>Tree & Plant Care</h3>
+                            <p>Expert planting, pruning, and nurturing to ensure strong, healthy, and beautiful growth.</p>
+                            <a href="#" class="view-more">View More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="irrigation-icon.png" alt="Irrigation Icon">
+                            </div>
+                            <h3>Irrigation Systems</h3>
+                            <p>Efficient watering solutions that keep your landscape thriving while conserving water.</p>
+                            <a href="#" class="view-more">View More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Custom Navigation -->
+                <div class="swiper-nav">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== SERVICES SECTION HTML END ========== -->
+
+    <!-- ========== PROJECTS SECTION HTML START ========== -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="projects-content">
+                <div class="projects-text">
+                    <h2>Our Projects</h2>
+                    <p>Bringing life, color, and harmony to outdoor spaces across our community.</p>
+                    <button class="btn btn-secondary">View All Projects</button>
+                </div>
+                
+                <div class="projects-gallery">
+                    <div class="project-item">
+                        <img src="project-1.jpg" alt="Outdoor deck and landscaping">
+                    </div>
+                    <div class="project-item">
+                        <img src="project-2.jpg" alt="Water feature and rocks">
+                    </div>
+                    <div class="project-item">
+                        <img src="project-3.jpg" alt="Stone pathway design">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== PROJECTS SECTION HTML END ========== -->
+
+<!-- ========== WHY CHOOSE US SECTION HTML START ========== -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-number">1</div>
+                    <h3>Experienced Team</h3>
+                    <p>Our skilled landscapers bring years of expertise in gardening and landscaping.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">2</div>
+                    <h3>Eco-Friendly Practices</h3>
+                    <p>We use sustainable methods and products that protect nature while enhancing beauty.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">3</div>
+                    <h3>Customized Solutions</h3>
+                    <p>Our tailored approaches bring years of expertise in gardening and landscaping.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">4</div>
+                    <h3>Reliable & On-Time Service</h3>
+                    <p>Count on us for punctual, hassle-free, and consistent garden care.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">5</div>
+                    <h3>Affordable Packages</h3>
+                    <p>Flexible pricing and service plans that fit every budget without compromising quality.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">6</div>
+                    <h3>Lasting Results</h3>
+                    <p>We focus on long-term growth and beauty, ensuring your garden thrives season after season.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== WHY CHOOSE US SECTION HTML END ========== -->
+
+<!-- ========== TESTIMONIALS SECTION HTML START ========== -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Our Real Customer Stories</h2>
+            
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="customer-info">
+                                    <img src="customer-1.jpg" alt="Luna Boss" class="customer-photo">
+                                    <div class="customer-details">
+                                        <h4>Luna Boss</h4>
+                                        <span class="customer-role">Home owner</span>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                Green Plans transformed my backyard into a beautiful garden paradise. Their team was professional, creative, and reliable. I couldn't be happier with the results!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="customer-info">
+                                    <img src="customer-2.jpg" alt="Ram" class="customer-photo">
+                                    <div class="customer-details">
+                                        <h4>Ram</h4>
+                                        <span class="customer-role">Cafe owner</span>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                We signed up for their monthly maintenance package, and our lawn has never looked this healthy. The team always arrives on time and works with great care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Custom Navigation -->
+                <div class="swiper-nav testimonials-nav">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== TESTIMONIALS SECTION HTML END ========== -->
+
+
+    <!-- ========== CONTACT SECTION HTML START ========== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <h2>Green Solutions Start with a Conversation</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="contact-images">
+                    <div class="contact-image-grid">
+                        <div class="contact-image-item">
+                            <img src="contact-garden-1.jpg" alt="Modern garden pathway">
+                        </div>
+                        <div class="contact-image-item">
+                            <img src="contact-garden-2.jpg" alt="Landscaped outdoor space">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== CONTACT SECTION HTML END ========== -->
+
+    <!-- ========== FOOTER SECTION HTML START ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Green Plans Logo" class="footer-logo-icon">
+                        <span class="footer-logo-text">Green Plans</span>
+                    </div>
+                    <p class="footer-description">
+                        At Green Plans, we cultivate beauty through thoughtful landscaping and dedicated experiences.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="facebook-icon.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="twitter-icon.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="instagram-icon.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <div class="footer-column-header">
+                            <h4>Quick Links</h4>
+                            <button class="footer-toggle" data-target="quick-links">
+                                <span class="toggle-icon">+</span>
+                            </button>
+                        </div>
+                        <ul class="footer-menu" id="quick-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <div class="footer-column-header">
+                            <h4>Our Services</h4>
+                            <button class="footer-toggle" data-target="our-services">
+                                <span class="toggle-icon">+</span>
+                            </button>
+                        </div>
+                        <ul class="footer-menu" id="our-services">
+                            <li><a href="#services">Landscape Design</a></li>
+                            <li><a href="#services">Garden & Lawn Maintenance</a></li>
+                            <li><a href="#services">Tree & Plant Care</a></li>
+                            <li><a href="#services">Irrigation Solutions</a></li>
+                            <li><a href="#services">Hardscaping</a></li>
+                            <li><a href="#services">Maintenance Packages</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <div class="footer-column-header">
+                            <h4>Contact Us</h4>
+                            <button class="footer-toggle" data-target="contact-info">
+                                <span class="toggle-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="footer-contact" id="contact-info">
+                            <div class="contact-item">
+                                <img src="location-icon.png" alt="Location">
+                                <span>Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet</span>
+                            </div>
+                            <div class="contact-item">
+                                <img src="phone-icon.png" alt="Phone">
+                                <span>+91 XXXXXXXXXX</span>
+                            </div>
+                            <div class="contact-item">
+                                <img src="email-icon.png" alt="Email">
+                                <span>loremipsum@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Green Plans. All rights reserved.</p>
+                <p class="footer-credit">Web design by CLOUDE</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========== FOOTER SECTION HTML END ========== -->
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
