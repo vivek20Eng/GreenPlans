@@ -47,15 +47,11 @@ body {
 }
 
 .logo-icon {
-  width: 30px;
-  height: 30px;
+  width: 10em;
+  height: auto;
 }
 
-.logo-text {
-  font-size: 24px;
-  font-weight: bold;
-  color: #7cb342;
-}
+
 
 .nav-menu {
   display: flex;
@@ -77,11 +73,11 @@ body {
 }
 
 .nav-links a:hover {
-  color: #7cb342;
+  color: #719327;
 }
 
 .contact-btn {
-  background: #7cb342;
+  background: #719327;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -180,7 +176,7 @@ body {
 }
 
 .btn-primary {
-  background: #7cb342;
+  background: #719327;
   color: white;
 }
 
@@ -255,7 +251,7 @@ body {
 }
 
 .view-more {
-  color: #7cb342;
+  color: #719327;
   text-decoration: none;
   font-weight: 600;
   border-bottom: 2px solid transparent;
@@ -263,7 +259,7 @@ body {
 }
 
 .view-more:hover {
-  border-color: #7cb342;
+  border-color: #719327;
 }
 /* ========== SERVICES SECTION STYLES END ========== */
 
@@ -380,7 +376,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #7cb342;
+  border-color: #719327;
 }
 
 .form-group textarea {
@@ -446,7 +442,7 @@ body {
 .feature-number {
   width: 40px;
   height: 40px;
-  background: #7cb342;
+  background: #719327;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -543,7 +539,7 @@ body {
 /* ========== PROJECTS SECTION STYLES START ========== */
 .projects {
   padding: 100px 0;
-  background: #7cb342;
+  background: #719327;
   color: white;
 }
 
@@ -593,7 +589,7 @@ body {
 
 /* ========== FOOTER SECTION STYLES START ========== */
 .footer {
-  background: #2c5530;
+  background: #002C23;
   color: white;
   padding: 60px 0 30px;
 }
@@ -618,15 +614,11 @@ body {
 }
 
 .footer-logo-icon {
-  width: 30px;
-  height: 30px;
+  width: 10em;
+  height: auto;
 }
 
-.footer-logo-text {
-  font-size: 24px;
-  font-weight: bold;
-  color: #7cb342;
-}
+
 
 .footer-description {
   color: rgba(255, 255, 255, 0.8);
@@ -642,7 +634,7 @@ body {
 .social-link {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -651,7 +643,7 @@ body {
 }
 
 .social-link:hover {
-  background: #7cb342;
+  background: #e4d9d9de;
 }
 
 .social-link img {
@@ -718,7 +710,7 @@ body {
 }
 
 .footer-menu a:hover {
-  color: #7cb342;
+  color: #719327;
 }
 
 .footer-contact {
@@ -862,11 +854,7 @@ body {
     height: 30px;
   }
 
-  .logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #7cb342;
-  }
+  
 
   .nav-links {
     display: flex;

@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     swiperButtons.forEach((button) => {
       button.style.width = "50px"
       button.style.height = "50px"
-      button.style.border = "2px solid #7cb342"
+      button.style.border = "2px solid #719327"
       button.style.borderRadius = "50%"
       button.style.background = "#ffffff"
       button.style.cursor = "pointer"
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".swiper-button-prev").forEach((button) => {
       button.addEventListener("mouseover", () => {
-        button.style.background = "#7cb342"
+        button.style.background = "#719327"
       })
       button.addEventListener("mouseout", () => {
         button.style.background = "#ffffff"
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".swiper-button-next").forEach((button) => {
       button.addEventListener("mouseover", () => {
-        button.style.background = "#7cb342"
+        button.style.background = "#719327"
       })
       button.addEventListener("mouseout", () => {
         button.style.background = "#ffffff"
@@ -192,13 +192,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".swiper-button-prev::after").forEach((pseudo) => {
       pseudo.style.fontSize = "18px"
       pseudo.style.fontWeight = "bold"
-      pseudo.style.color = "#7cb342"
+      pseudo.style.color = "#719327"
     })
 
     document.querySelectorAll(".swiper-button-next::after").forEach((pseudo) => {
       pseudo.style.fontSize = "18px"
       pseudo.style.fontWeight = "bold"
-      pseudo.style.color = "#7cb342"
+      pseudo.style.color = "#719327"
     })
 
     document.querySelectorAll(".swiper-button-prev").forEach((button) => {
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.style.color = "#ffffff"
       })
       button.addEventListener("mouseout", () => {
-        button.style.color = "#7cb342"
+        button.style.color = "#719327"
       })
     })
 
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.style.color = "#ffffff"
       })
       button.addEventListener("mouseout", () => {
-        button.style.color = "#7cb342"
+        button.style.color = "#719327"
       })
     })
   }
