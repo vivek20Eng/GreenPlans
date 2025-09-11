@@ -335,7 +335,6 @@ body {
   text-decoration: none;
   display: inline-block;
   height: fit-content;
-  
 }
 
 .btn-primary {
@@ -554,9 +553,9 @@ body {
   overflow: hidden;
 }
 .projects .absolute-pattern {
-bottom: -10px;
-left: 0;
-z-index: 0;
+  bottom: -10px;
+  left: 0;
+  z-index: 0;
 }
 /* .projects::before {
   content: "";
@@ -692,7 +691,7 @@ z-index: 0;
 }
 
 .testimonials-swiper .swiper-pagination {
-    display: none;
+  display: none;
 }
 .testimonial-card {
   background: white;
@@ -729,10 +728,9 @@ z-index: 0;
   font-family: var(--font-geist);
 }
 .customer-name {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .customer-role {
   color: #719327;
@@ -770,7 +768,7 @@ z-index: 0;
 /* Contact Section Styles */
 .contact {
   padding: 50px 0;
-  background: #F5F6F3;
+  background: #f5f6f3;
 }
 
 .contact-content {
@@ -870,10 +868,10 @@ z-index: 0;
   position: relative;
 }
 .absolute-pattern {
-    position: absolute;
-    z-index: 1;
-    left: 20px;
-    bottom: 0;
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  bottom: 0;
 }
 .footer-content {
   display: grid;
@@ -1004,7 +1002,7 @@ z-index: 0;
   gap: 12px;
 }
 .contact-item > img {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 .contact-item span {
   color: rgba(255, 255, 255, 0.8);

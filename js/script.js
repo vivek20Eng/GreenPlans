@@ -281,49 +281,50 @@ document.addEventListener("DOMContentLoaded", () => {
   initFooterToggles();
 });
 
-
 // gasp draw animation start
- gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-        document.addEventListener("DOMContentLoaded", () => {
-const svgPath = document.querySelector(".absolute-pattern svg path");            const pathLength = svgPath.getTotalLength();
+document.addEventListener("DOMContentLoaded", () => {
+  const svgPath = document.querySelector(".absolute-pattern svg path");
+  const pathLength = svgPath.getTotalLength();
 
-            // Set initial stroke dash array and offset
-            svgPath.style.strokeDasharray = pathLength;
-            svgPath.style.strokeDashoffset = pathLength;
+  // Set initial stroke dash array and offset
+  svgPath.style.strokeDasharray = pathLength;
+  svgPath.style.strokeDashoffset = pathLength;
 
-            // GSAP animation timeline
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".svg-container",
-                    start: "top 80%", // Animation starts when 80% of the container is in view
-                    toggleActions: "play none none reverse",
-                    markers: false // Set to true for debugging
-                },
-                onComplete: () => {
-                    // Infinite loop with delay after completion
-                    gsap.fromTo(svgPath, 
-                        { strokeDashoffset: 0 },
-                        {
-                            strokeDashoffset: pathLength,
-                            duration: 4,
-                            ease: "power1.inOut",
-                            repeat: -1, // Infinite repeat
-                            yoyo: true, // Reverse back
-                            repeatDelay: 1 // Delay of 1 second between repeats
-                        }
-                    );
-                }
-            });
+  // GSAP animation timeline
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".svg-container",
+      start: "top 80%", // Animation starts when 80% of the container is in view
+      toggleActions: "play none none reverse",
+      markers: false, // Set to true for debugging
+    },
+    onComplete: () => {
+      // Infinite loop with delay after completion
+      gsap.fromTo(
+        svgPath,
+        { strokeDashoffset: 0 },
+        {
+          strokeDashoffset: pathLength,
+          duration: 4,
+          ease: "power1.inOut",
+          repeat: -1, // Infinite repeat
+          yoyo: true, // Reverse back
+          repeatDelay: 1, // Delay of 1 second between repeats
+        },
+      );
+    },
+  });
 
-            // Animate the drawing effect
-            tl.to(svgPath, {
-                strokeDashoffset: 0,
-                duration: 2,
-                ease: "power1.out"
-            });
+  // Animate the drawing effect
+  tl.to(svgPath, {
+    strokeDashoffset: 0,
+    duration: 2,
+    ease: "power1.out",
+  });
 
-            // Refresh ScrollTrigger to ensure proper calculation
-            ScrollTrigger.refresh();
-        });
-        // gasp draw animation end
+  // Refresh ScrollTrigger to ensure proper calculation
+  ScrollTrigger.refresh();
+});
+// gasp draw animation end
