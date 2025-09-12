@@ -390,3 +390,74 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // key service toggle end ----------
+
+
+// Faq Section js toggle start
+// FAQ Toggle Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const faqItems = document.querySelectorAll(".faq-item");
+  
+  faqItems.forEach((item) => {
+    const header = item.querySelector(".faq-item-header");
+    const answer = item.querySelector(".faq-answer");
+    
+    if (header && answer) {
+      // Set initial state for non-active items
+      if (!item.classList.contains("active")) {
+        answer.style.maxHeight = "0px";
+        answer.style.overflow = "hidden";
+      } else {
+        // Set initial state for active item
+        answer.style.maxHeight = "none";
+        const naturalHeight = answer.scrollHeight;
+        answer.style.maxHeight = naturalHeight + "px";
+      }
+      
+      answer.style.transition = "max-height 0.5s ease, padding 0.5s ease";
+      
+      header.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+        
+        // Close all other items
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item && otherItem.classList.contains("active")) {
+            otherItem.classList.remove("active");
+            const otherAnswer = otherItem.querySelector(".faq-answer");
+            if (otherAnswer) {
+              otherAnswer.style.maxHeight = otherAnswer.scrollHeight + "px";
+              otherAnswer.offsetHeight; // Force reflow
+              otherAnswer.style.maxHeight = "0px";
+            }
+          }
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add("active");
+          // Calculate the natural height
+          answer.style.maxHeight = "none";
+          const naturalHeight = answer.scrollHeight;
+          answer.style.maxHeight = "0px";
+          
+          // Force reflow then animate
+          answer.offsetHeight;
+          answer.style.maxHeight = naturalHeight + "px";
+          
+          // Clean up after animation
+          setTimeout(() => {
+            if (item.classList.contains("active")) {
+              answer.style.maxHeight = "none";
+            }
+          }, 500);
+        } else {
+          item.classList.remove("active");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          answer.offsetHeight; // Force reflow
+          answer.style.maxHeight = "0px";
+        }
+      });
+    }
+  });
+});
+
+// Faq Section js toggle end

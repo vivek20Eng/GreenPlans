@@ -189,6 +189,40 @@
     height: 300px;
   }
   /* Outdoor Fresh Responsive Styles end */
+
+  /* Faq Section responsive styles start */
+  .faq-title {
+    font-size: 2.5rem;
+  }
+  
+  .faq-item-header {
+    padding: 20px 0;
+  }
+  
+  .faq-number {
+    font-size: 1.3rem;
+    margin-right: 20px;
+    min-width: 30px;
+  }
+  
+  .faq-question {
+    font-size: 1.1rem;
+  }
+  
+  .faq-answer {
+    padding: 0 0 20px 50px;
+    font-size: 1rem;
+  }
+  
+  .faq-item.active .faq-answer {
+    padding: 0 0 20px 50px;
+  }
+  
+  .faq-toggle-icon {
+    width: 35px;
+    height: 35px;
+  }
+  /* Faq Section responsive styles end */
 }
 
 @media (max-width: 480px) {
@@ -297,4 +331,47 @@
     height: 250px;
   }
   /* Outdoor Fresh Responsive Styles end */
+
+  /* Faq Section responsive styles start */
+  .faq-section {
+    padding: 60px 0;
+  }
+  
+  .faq-title {
+    font-size: 2rem;
+  }
+  
+  .faq-item-header {
+    padding: 15px 0;
+  }
+  
+  .faq-number {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    min-width: 25px;
+  }
+  
+  .faq-question {
+    font-size: 1rem;
+  }
+  
+  .faq-answer {
+    padding: 0 0 15px 40px;
+    font-size: 0.95rem;
+  }
+  
+  .faq-item.active .faq-answer {
+    padding: 0 0 15px 40px;
+  }
+  
+  .faq-toggle-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .faq-toggle-arrow {
+    width: 10px;
+    height: 10px;
+  }
+  /* Faq Section responsive styles end */
 }

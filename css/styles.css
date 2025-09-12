@@ -1467,3 +1467,117 @@ background-color: #F5F6F3;
 /* ========== OUTDOOR FRESH SECTION STYLES END ========== */
 
 
+/* ========== FAQ SECTION STYLES ========== */
+.faq-section {
+  padding: 10px 0 50px 0;
+  background: #ffffff;
+  color: #333;
+  position: relative;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faq-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item-header:hover {
+  color: #7cb342;
+}
+
+.faq-number {
+  font-size: 2rem;
+  font-weight: 206;
+  color: #333;
+  margin-right: 30px;
+  min-width: 40px;
+  font-family: var(--geist-medium);
+}
+
+.faq-question {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #333;
+  margin: 0;
+  text-align: left;
+  font-family: var(--geist-medium);
+}
+
+.faq-toggle-icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #7cb342;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-toggle-arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #7cb342;
+  border-bottom: 2px solid #7cb342;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle-arrow {
+  transform: rotate(225deg);
+}
+
+.faq-answer {
+  padding: 0 0 30px 70px;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  color: transparent;
+  padding: 0 0 0px 70px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 0 0px 70px;
+  color: #000;
+}
+
+/* ========== FAQ SECTION STYLES END ========== */
