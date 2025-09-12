@@ -328,3 +328,65 @@ document.addEventListener("DOMContentLoaded", () => {
   ScrollTrigger.refresh();
 });
 // gasp draw animation end
+
+
+// key service toggle start ---------
+
+        // Key Services Toggle Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const keyServicesItems = document.querySelectorAll(".key-services-item");
+  
+  keyServicesItems.forEach((item) => {
+    const description = item.querySelector(".key-services-description");
+    const header = item.querySelector(".key-services-item-header");
+    
+    if (description && header) {
+      // Set initial state
+      description.style.maxHeight = "0px";
+      description.style.overflow = "hidden";
+      description.style.transition = "max-height 0.5s ease, padding 0.5s ease";
+      
+      header.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+        
+        // Close all other items
+        keyServicesItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+            const otherDescription = otherItem.querySelector(".key-services-description");
+            if (otherDescription) {
+              otherDescription.style.maxHeight = "0px";
+            }
+          }
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add("active");
+          // Calculate the natural height
+          description.style.maxHeight = "none";
+          const naturalHeight = description.scrollHeight;
+          description.style.maxHeight = "0px";
+          
+          // Force reflow then animate
+          description.offsetHeight;
+          description.style.maxHeight = naturalHeight + "px";
+          
+          // Clean up after animation
+          setTimeout(() => {
+            if (item.classList.contains("active")) {
+              description.style.maxHeight = "none";
+            }
+          }, 500);
+        } else {
+          item.classList.remove("active");
+          description.style.maxHeight = description.scrollHeight + "px";
+          description.offsetHeight;
+          description.style.maxHeight = "0px";
+        }
+      });
+    }
+  });
+});
+
+// key service toggle end ----------

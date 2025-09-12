@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>service detail | Green Plans - Expert Landscaping</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+
+
+
+    </style>
+  </head>
+  <body class="service-detail-sec">
+    <!-- Navigation backdrop for mobile -->
+    <div class="nav-backdrop" id="nav-backdrop"></div>
+
+    <!-- Navigation HTML -->
+    <nav class="navbar gsap-fade-up">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img
+            src="assets/images/primary-logo.svg"
+            alt="Green Plans Logo"
+            class="logo-icon no-drag"
+          />
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+      </div>
+    </nav>
+
+    <!-- Hero Section HTML -->
+    <section class="hero" id="home">
+      <div class="hero-background">
+        <img
+          src="assets/images/service-banner.jpg"
+          alt="Modern landscaped building"
+          class="no-drag"
+        />
+      </div>
+      <div class="hero-content gsap-fade-up">
+        <h1 class="hero-title title">
+          Garden & Lawn Maintenance
+        </h1>
+        <!-- <div class="hero-buttons">
+          <button class="btn btn-secondary">Who we are</button>
+          <button class="btn btn-primary">Get a Free Quote</button>
+        </div> -->
+      </div>
+    </section>
+
+<!-- Why Choose Us Section HTML -->
+    <section class="why-choose-us">
+      <div class="container">
+        <h2 class="section-title gsap-fade-up">Why Choose Us</h2>
+        <div class="features-grid">
+          <div class="feature-item gsap-scale">
+            <section>
+              <div class="feature-number">1</div>
+            </section>
+            <section>
+              <h3>Experienced Team</h3>
+              <p>
+                Our skilled landscapers bring years of expertise in gardening
+                and landscaping.
+              </p>
+            </section>
+          </div>
+          <div class="feature-item gsap-scale">
+            <section>
+              <div class="feature-number">2</div>
+            </section>
+            <section>
+              <h3>Eco-Friendly Practices</h3>
+              <p>
+                We use sustainable methods and products that protect nature
+                while enhancing beauty.
+              </p>
+            </section>
+          </div>
+          <div class="feature-item gsap-scale">
+            <section>
+              <div class="feature-number">3</div>
+            </section>
+            <section>
+              <h3>Customized Solutions</h3>
+              <p>
+                Our tailored approaches bring years of expertise in gardening
+                and landscaping.
+              </p>
+            </section>
+          </div>
+          <div class="feature-item gsap-scale">
+            <section>
+              <div class="feature-number">4</div>
+            </section>
+            <section>
+              <h3>Reliable & On-Time Service</h3>
+              <p>
+                Count on us for punctual, hassle-free, and consistent garden
+                care.
+              </p>
+            </section>
+          </div>
+          <div class="feature-item gsap-scale">
+            <section>
+              <div class="feature-number">5</div>
+            </section>
+            <section>
+              <h3>Affordable Packages</h3>
+              <p>
+                Flexible pricing and service plans that fit every budget without
+                compromising quality.
+              </p>
+            </section>
+          </div>
+          <div class="feature-item gsap-scale">
+            <section>
+              <div class="feature-number">6</div>
+            </section>
+            <section>
+              <h3>Lasting Results</h3>
+              <p>
+                We focus on long-term growth and beauty, ensuring your garden
+                thrives season after season.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section HTML end -->
+    
+
+    <section class="key-services-section">
+      <div class="key-services-container">
+        <div class="key-services-content">
+          <div class="key-services-text">
+            <h2 class="key-services-title">Key Services in Garden & Lawn Maintenance</h2>
+            <ul class="key-services-list">
+              <li class="key-services-item">
+                <div class="key-services-item-header">
+                    <h3>Lawn Care & Mowing</h3>
+                    <img src="assets/icons/arrow-right.svg" alt="Toggle Icon" class="key-services-icon no-drag" />
+                </div>
+                <p class="key-services-description">Regular mowing to keep your lawn lush, healthy, and neatly trimmed, last updated on September 11, 2025, 12:50 PM IST.</p>
+              </li>
+              <li class="key-services-item">
+                <div class="key-services-item-header">
+                    <h3>Weeding & Fertilization</h3>
+                    <img src="assets/icons/arrow-right.svg" alt="Toggle Icon" class="key-services-icon no-drag" />
+                </div>
+                <p class="key-services-description">Expert weeding and fertilization to nourish your soil and plants, last updated on September 11, 2025, 12:50 PM IST.</p>
+              </li>
+              <li class="key-services-item">
+                <div class="key-services-item-header">
+                    <h3>Pruning & Trimming</h3>
+                    <img src="assets/icons/arrow-right.svg" alt="Toggle Icon" class="key-services-icon no-drag" />
+                </div>
+                <p class="key-services-description">Precise pruning and trimming to promote healthy growth, last updated on September 11, 2025, 12:50 PM IST.</p>
+              </li>
+              <li class="key-services-item">
+                <div class="key-services-item-header">
+                    <h3>Irrigation & Watering Support</h3>
+                    <img src="assets/icons/arrow-right.svg" alt="Toggle Icon" class="key-services-icon no-drag" />
+                </div>
+                <p class="key-services-description">Smart watering systems to keep plants nourished, last updated on September 11, 2025, 12:50 PM IST.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="key-services-image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&fit=crop&crop=center" alt="Garden landscape with lawn and plants" class="key-services-img no-drag" />
+          </div>
+        </div>
+      </div>
+      <div class="key-services-pattern">
+        <svg width="354" height="408" viewBox="0 0 354 408" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M208.189 192.765C234.498 192.582 256.865 201.231 278.195 213.946C299.949 226.927 322.085 239.285 344.022 251.951L353.423 257.379C351.981 260.3 351.161 262.337 350.05 264.184C330.658 296.617 312.848 330.12 291.428 361.138C267.585 395.622 219.482 406.836 180.993 389.657C165.086 382.562 149.776 373.856 133.274 365.328C141.586 354.243 148.256 344.499 155.83 335.499C163.774 326.09 169.458 325.484 180.321 330.845C186.333 333.827 192.47 336.749 198.572 339.383C217.978 347.81 235.225 344.306 248.155 327.224C259.493 312.244 269.008 295.878 279.191 280.32C243.207 249.215 202.078 248.35 170.074 273.525C157.144 283.94 146.061 296.459 137.292 310.557C117.15 342.557 99.053 375.827 80.0558 408.577C69.0033 427.72 56.4207 431.652 36.7438 422.002C29.6401 418.523 23.025 414.082 15.2572 409.597L20.6632 400.233C34.7649 375.808 49.1167 351.528 62.8543 326.848C63.6863 325.007 64.1051 323.006 64.0815 320.985C64.0579 318.964 63.5924 316.973 62.7177 315.151C49.7216 293.853 35.9216 273.023 22.6479 251.897C0.991756 217.535 -7.03178 181.002 7.96722 142.012C16.7728 119.061 29.7367 98.3774 50.4965 84.0166C76.4784 65.9619 103.227 48.9275 129.036 30.5951C143.768 20.1297 157.276 7.93535 172.41 -4.34203C170.829 -4.7217 171.66 -4.77509 172 -4.4012C208.966 36.9345 195.81 46.1329 164.848 68.7322C145.702 82.6471 124.977 94.4067 106.419 108.995C93.9053 118.88 82.8824 130.517 73.6907 143.547C61.1445 161.429 59.7856 182.414 64.7927 203.499C69.4551 223.141 79.9902 239.886 91.7191 257.143C110.988 244.21 128.775 230.687 141.013 211.606C147.917 200.842 147.481 188.394 142.783 176.396C139.385 167.77 135.733 159.197 132.521 150.478C125.767 132.073 129.262 121.939 146.054 111.641C151.64 108.201 157.795 105.624 164.57 102.205C175.865 134.65 206.487 156.062 208.189 192.765Z"
+            fill="#71932705" 
+            stroke="#71932705" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </section>
+
+
+    <!-- Footer Section HTML -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand gsap-fade-up">
+            <div class="footer-logo">
+              <img
+                src="assets/images/footer-logo.svg"
+                alt="Green Plans Logo"
+                class="footer-logo-icon no-drag"
+              />
+            </div>
+            <p class="footer-description">
+              At Green Plans, we cultivate beauty through thoughtful landscaping
+              and dedicated experiences.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><img
+                  src="assets/icons/facebook.svg"
+                  alt="Facebook"
+                  class="no-drag"
+              /></a>
+              <a href="#" class="social-link"
+                ><img
+                  src="assets/icons/instagram.svg"
+                  alt="Instagram"
+                  class="no-drag"
+              /></a>
+              <a href="#" class="social-link"
+                ><img
+                  src="assets/icons/linkedIn.svg"
+                  alt="LinkedIn"
+                  class="no-drag"
+              /></a>
+            </div>
+          </div>
+
+          <div class="footer-links gsap-fade-up">
+            <div class="footer-column">
+              <div class="footer-column-header">
+                <h4>Quick Links</h4>
+                <button class="footer-toggle" data-target="quick-links">
+                  <span class="toggle-icon">+</span>
+                </button>
+              </div>
+              <ul class="footer-menu" id="quick-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-column-header">
+                <h4>Our Services</h4>
+                <button class="footer-toggle" data-target="our-services">
+                  <span class="toggle-icon">+</span>
+                </button>
+              </div>
+              <ul class="footer-menu" id="our-services">
+                <li><a href="#services">Landscape Design</a></li>
+                <li><a href="#services">Garden & Lawn Maintenance</a></li>
+                <li><a href="#services">Tree & Plant Care</a></li>
+                <li><a href="#services">Irrigation Solutions</a></li>
+                <li><a href="#services">Hardscaping</a></li>
+                <li><a href="#services">Maintenance Packages</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-column-header">
+                <h4>Contact Us</h4>
+                <button class="footer-toggle" data-target="contact-info">
+                  <span class="toggle-icon">+</span>
+                </button>
+              </div>
+              <div class="footer-contact" id="contact-info">
+                <div class="contact-item">
+                  <img
+                    src="assets/icons/location.svg"
+                    alt="Location"
+                    class="no-drag"
+                  />
+                  <span
+                    >Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem
+                    ipsum Dolor Sit Amet</span
+                  >
+                </div>
+                <div class="contact-item">
+                  <img
+                    src="assets/icons/phone.svg"
+                    alt="Phone"
+                    class="no-drag"
+                  />
+                  <span>+91 XXXXXXXXXX</span>
+                </div>
+                <div class="contact-item">
+                  <img
+                    src="assets/icons/mail.svg"
+                    alt="Email"
+                    class="no-drag"
+                  />
+                  <span>loremipsum@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Green Plans. All rights reserved.</p>
+          <p class="footer-credit">Web design by CLOUDE</p>
+        </div>
+      </div>
+
+      <section class="absolute-pattern">
+        <svg
+          width="354"
+          height="408"
+          viewBox="0 0 354 408"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M208.189 192.765C234.498 192.582 256.865 201.231 278.195 213.946C299.949 226.927 322.085 239.285 344.022 251.951L353.423 257.379C351.981 260.3 351.161 262.337 350.05 264.184C330.658 296.617 312.848 330.12 291.428 361.138C267.585 395.622 219.482 406.836 180.993 389.657C165.086 382.562 149.776 373.856 133.274 365.328C141.586 354.243 148.256 344.499 155.83 335.499C163.774 326.09 169.458 325.484 180.321 330.845C186.333 333.827 192.47 336.749 198.572 339.383C217.978 347.81 235.225 344.306 248.155 327.224C259.493 312.244 269.008 295.878 279.191 280.32C243.207 249.215 202.078 248.35 170.074 273.525C157.144 283.94 146.061 296.459 137.292 310.557C117.15 342.557 99.053 375.827 80.0558 408.577C69.0033 427.72 56.4207 431.652 36.7438 422.002C29.6401 418.523 23.025 414.082 15.2572 409.597L20.6632 400.233C34.7649 375.808 49.1167 351.528 62.8543 326.848C63.6863 325.007 64.1051 323.006 64.0815 320.985C64.0579 318.964 63.5924 316.973 62.7177 315.151C49.7216 293.853 35.9216 273.023 22.6479 251.897C0.991756 217.535 -7.03178 181.002 7.96722 142.012C16.7728 119.061 29.7367 98.3774 50.4965 84.0166C76.4784 65.9619 103.227 48.9275 129.036 30.5951C143.768 20.1297 157.276 7.93535 172.41 -4.34203C170.829 -4.7217 171.66 -4.77509 172 -4.4012C208.966 36.9345 195.81 46.1329 164.848 68.7322C145.702 82.6471 124.977 94.4067 106.419 108.995C93.9053 118.88 82.8824 130.517 73.6907 143.547C61.1445 161.429 59.7856 182.414 64.7927 203.499C69.4551 223.141 79.9902 239.886 91.7191 257.143C110.988 244.21 128.775 230.687 141.013 211.606C147.917 200.842 147.481 188.394 142.783 176.396C139.385 167.77 135.733 159.197 132.521 150.478C125.767 132.073 129.262 121.939 146.054 111.641C151.64 108.201 157.795 105.624 164.57 102.205C175.865 134.65 206.487 156.062 208.189 192.765Z"
+            fill="#FFFFFF05"
+            stroke="#FFFFFF05"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+
+   
+    </script>
+  </body>
+</html>

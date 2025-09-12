@@ -1080,7 +1080,7 @@ body {
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -20px -40px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -1257,6 +1257,147 @@ height: 100%;
 
 /* ========== STORY SECTION STYLES END ========== */
 
+/* ========== KEY SERVICES SECTION STYLES ========== */
+.key-services-section {
+  padding: 50px 0;
+  background: white;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.key-services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.key-services-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.key-services-text {
+  text-align: left;
+}
+
+.key-services-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: white;
+  line-height: 1.2;
+  color: #002C23;
+}
+
+.key-services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.key-services-item {
+  background: rgba(255, 255, 255, 0.1);
+  /* border-radius: 10px; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #C2C5C1;
+}
+
+.key-services-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.key-services-item-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* padding: 15px; */
+  position: relative;
+}
+
+.key-services-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  border: 2px solid #719327;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.key-services-item.active .key-services-icon {
+  transform: rotate(90deg);
+}
+
+.key-services-item h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 500;
+  font-family: var(--font-geist);
+  margin: 0;
+  flex: 1;
+}
+
+.key-services-description {
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.6;
+  padding: 10px 15px 10px 0px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.key-services-item.active .key-services-description {
+  max-height: 200px;
+  padding: 0 15px 15px 0px;
+  color: #000000;
+}
+
+.key-services-image {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+
+.key-services-img {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); */
+  transition: transform 0.3s ease;
+}
+
+.key-services-img:hover {
+  transform: scale(1.02);
+}
+
+.key-services-pattern {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.service-detail-sec .why-choose-us{
+background-color: #F5F6F3;
+}
+/* ========== KEY SERVICES SECTION STYLES END ========== */
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .hamburger {
@@ -1388,6 +1529,42 @@ height: 100%;
     gap: 10px;
     text-align: center;
   }
+/* key services responsive styles start */
+  .key-services-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .key-services-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .key-services-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 10px; */
+  }
+
+  .key-services-description {
+    padding: 0 10px 10px 10px;
+  }
+
+  .key-services-item.active .key-services-description {
+    padding: 0 10px 10px 10px;
+  }
+
+  .key-services-image {
+    position: relative;
+    top: 0;
+  }
+
+  .key-services-img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* key services responsive styles end */
 }
 
 @media (max-width: 480px) {
@@ -1460,4 +1637,22 @@ height: 100%;
     width: 35px;
     height: 35px;
   }
+
+/* key services responsive styles start */
+   .key-services-section {
+    padding: 60px 0;
+  }
+
+  .key-services-title {
+    font-size: 1.8rem;
+  }
+
+  .key-services-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .key-services-description {
+    font-size: 1rem;
+  }
+  /* key services responsive styles end */
 }
