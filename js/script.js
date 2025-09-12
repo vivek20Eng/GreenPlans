@@ -461,3 +461,76 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Faq Section js toggle end
+
+// contact  js in service detail section start
+// Contact Form Enhancement
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector(".contact-form");
+  const contactInputs = document.querySelectorAll(".contact-form-input, .contact-form-textarea");
+  
+  // Handle form submission
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(contactForm);
+      const name = contactInputs[0].value;
+      const email = contactInputs[1].value;
+      const phone = contactInputs[2].value;
+      const message = contactInputs[3].value;
+      
+      // Basic validation
+      if (!name || !email || !phone || !message) {
+        alert("Please fill in all fields");
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address");
+        return;
+      }
+      
+      // Success message
+      alert("Thank you for your message! We'll get back to you soon.");
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Reset labels
+      contactInputs.forEach(input => {
+        const label = input.nextElementSibling;
+        if (label && label.classList.contains("contact-form-label")) {
+          label.style.top = "15px";
+          label.style.fontSize = "1.1rem";
+          label.style.color = "#666";
+        }
+      });
+    });
+  }
+  
+  // Enhanced label animation
+  contactInputs.forEach(input => {
+    const label = input.nextElementSibling;
+    
+    input.addEventListener("focus", () => {
+      if (label && label.classList.contains("contact-form-label")) {
+        label.style.top = "-10px";
+        label.style.fontSize = "0.9rem";
+        label.style.color = "#7cb342";
+      }
+    });
+    
+    input.addEventListener("blur", () => {
+      if (label && label.classList.contains("contact-form-label") && !input.value) {
+        label.style.top = "15px";
+        label.style.fontSize = "1.1rem";
+        label.style.color = "#666";
+      }
+    });
+  });
+});
+
+// contact  js in service detail section end

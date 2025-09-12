@@ -223,6 +223,35 @@
     height: 35px;
   }
   /* Faq Section responsive styles end */
+
+  /* CONTACT SECTION RESPONSIVE STYLES IN SERVICES DETAILS */
+  .contact-content {
+    gap: 60px;
+  }
+  
+  .contact-images {
+    height: 400px;
+  }
+  
+  .contact-image-1 {
+    width: 240px;
+    height: 170px;
+  }
+  
+  .contact-image-2 {
+    width: 280px;
+    height: 190px;
+    bottom: 60px;
+    left: 40px;
+  }
+  
+  .contact-image-3 {
+    width: 170px;
+    height: 240px;
+    top: 100px;
+    right: 60px;
+  }
+  /* CONTACT SECTION RESPONSIVE STYLES IN SERVICES DETAILS END */
 }
 
 @media (max-width: 480px) {
@@ -374,4 +403,43 @@
     height: 10px;
   }
   /* Faq Section responsive styles end */
+
+  /* CONTACT SECTION RESPONSIVE STYLES IN SERVICES DETAILS START */
+  .contact-title {
+    font-size: 2rem;
+  }
+  
+  .contact-form-input,
+  .contact-form-textarea {
+    font-size: 1rem;
+  }
+  
+  .contact-form-label {
+    font-size: 1rem;
+  }
+  
+  .contact-images {
+    height: 280px;
+    max-width: 320px;
+  }
+  
+  .contact-image-1 {
+    width: 160px;
+    height: 110px;
+  }
+  
+  .contact-image-2 {
+    width: 180px;
+    height: 120px;
+    bottom: 30px;
+    left: 15px;
+  }
+  
+  .contact-image-3 {
+    width: 110px;
+    height: 160px;
+    top: 60px;
+    right: 30px;
+  }
+  /* CONTACT SECTION RESPONSIVE STYLES IN SERVICES DETAILS end */
 }

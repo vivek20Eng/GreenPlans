@@ -1581,3 +1581,165 @@ background-color: #F5F6F3;
 }
 
 /* ========== FAQ SECTION STYLES END ========== */
+
+/* ========== CONTACT SECTION STYLES IN SERVICE DETAIL SECTION START ========== */
+.contact-section {
+  padding: 100px 0;
+  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-text {
+  max-width: 600px;
+}
+
+.contact-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #002C23;
+  line-height: 1.2;
+  font-family: var(--geist-semibold);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-group {
+  position: relative;
+}
+
+.contact-form-input {
+  width: 100%;
+  padding: 20px 0;
+  font-size: 1.1rem;
+  color: #333;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form-input:focus {
+  border-bottom-color: #7cb342;
+}
+
+.contact-form-label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  font-size: 1.1rem;
+  color: #666;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form-input:focus + .contact-form-label,
+.contact-form-input:not(:placeholder-shown) + .contact-form-label {
+  top: -20px;
+  font-size: 0.9rem;
+  color: #7cb342;
+}
+
+.contact-form-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  color: #333;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form-textarea:focus {
+  border-bottom-color: #7cb342;
+}
+
+.contact-submit-btn {
+  background: #7cb342;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 30px;
+}
+
+.contact-submit-btn:hover {
+  background: #689f38;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(124, 179, 66, 0.3);
+}
+
+.contact-images {
+  position: relative;
+  height: 100%;
+}
+
+.contact-image {
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.contact-image:hover {
+  transform: scale(1.02);
+}
+
+.contact-image-1 {
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.contact-image-2 {
+  bottom: 0px;
+  left: -50px;
+  width: 350px;
+  height: 220px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.contact-image-3 {
+  top: 20px;
+  right: 0;
+  width: 90%;
+  height: 80%;
+  object-fit: cover;
+  z-index: 1;
+}
+/* ========== END OF CONTACT SECTION STYLES IN Service Page end ========== */
