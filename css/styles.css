@@ -1707,7 +1707,7 @@ background-color: #F5F6F3;
 
 .contact-image {
   position: absolute;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
@@ -1743,3 +1743,35 @@ background-color: #F5F6F3;
   z-index: 1;
 }
 /* ========== END OF CONTACT SECTION STYLES IN Service Page end ========== */
+
+/* BreadCrumb css start */
+
+      .breadcrumb-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .breadcrumb-link {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .breadcrumb-link:hover {
+        color: #2c5530;
+      }
+
+      .breadcrumb-separator {
+        font-size: 12px;
+        color: #999;
+      }
+
+      .breadcrumb-current {
+        color: #333;
+        font-weight: 500;
+      }
+      /* BreadCrumb css end */
