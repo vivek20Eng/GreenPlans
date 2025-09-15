@@ -182,7 +182,7 @@ body {
 }
 
 .logo-icon {
-  width: 8em;
+  width: 10em;
   height: auto;
 }
 
@@ -1583,7 +1583,7 @@ background-color: #F5F6F3;
 /* ========== FAQ SECTION STYLES END ========== */
 
 /* ========== CONTACT SECTION STYLES IN SERVICE DETAIL SECTION START ========== */
-.contact-section {
+.service-contact-section {
   padding: 100px 0;
   background: #f5f5f5;
   position: relative;

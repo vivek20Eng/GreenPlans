@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Green Plans - Expert Landscaping</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+
+
+
+.contact-container {
+  max-width: 1200px;
+  margin: 90px auto 50px auto;
+  padding: 40px 20px;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-left {
+  padding-right: 20px;
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  font-family: var(--font-geist);
+}
+
+.contact-info {
+  margin-bottom: 50px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.contact-map {
+  width: 100%;
+  height: 230px;
+  border: 1px solid rgba(0, 0, 0, 0.836);
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.contact-map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #e9ecef;
+}
+
+.contact-right {
+  padding-left: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-group {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 15px;
+  border: none; 
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: #719327;
+  /* box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.1); */
+}
+
+.contact-textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.contact-submit-btn {
+  background-color: #719327;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.contact-submit-btn:hover {
+  background-color: #689f38;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(124, 179, 66, 0.3);
+}
+
+.contact-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .contact-left,
+  .contact-right {
+    padding: 0;
+  }
+  
+  .contact-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .contact-container {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 1.8rem;
+  }
+  
+  .contact-input,
+  .contact-textarea {
+    padding: 12px;
+  }
+  
+  .contact-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <!-- Navigation backdrop for mobile -->
+    <div class="nav-backdrop" id="nav-backdrop"></div>
+
+    <!-- Navigation HTML -->
+    <nav class="navbar gsap-fade-up">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img
+            src="assets/images/primary-logo.svg"
+            alt="Green Plans Logo"
+            class="logo-icon no-drag"
+          />
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+      </div>
+    </nav>
+
+    <div class="contact-container">
+        <nav class="breadcrumb-nav">
+          <a href="#" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Projects</span>
+        </nav>
+        <h1 class="contact-heading">Contact Us</h1>
+      <div class="contact-section">
+        <div class="contact-left">
+          
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <img src="assets/icons/location.svg" alt="Location" class="contact-icon">
+              <p class="contact-text">Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet, Lorem ipsum Dolor Sit Amet</p>
+            </div>
+            
+            <div class="contact-info-item">
+              <img src="assets/icons/phone.svg" alt="Phone" class="contact-icon">
+              <p class="contact-text">+91 XXXX XXXXXX</p>
+            </div>
+            
+            <div class="contact-info-item">
+              <img src="assets/icons/mail.svg" alt="Email" class="contact-icon">
+              <p class="contact-text">example@email.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-map">
+            <img src="assets/images/map-placeholder.jpg" alt="Map" class="contact-map-image">
+          </div>
+        </div>
+        
+        <div class="contact-right">
+          <form class="contact-form">
+            <div class="contact-form-group">
+              <input type="text" class="contact-input" placeholder="Name" required>
+            </div>
+            
+            <div class="contact-form-group">
+              <input type="email" class="contact-input" placeholder="E-mail" required>
+            </div>
+            
+            <div class="contact-form-group">
+              <input type="tel" class="contact-input" placeholder="Phone" required>
+            </div>
+            
+            <div class="contact-form-group">
+              <textarea class="contact-textarea" placeholder="Message" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="contact-submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Footer Section HTML -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand gsap-fade-up">
+            <div class="footer-logo">
+              <img
+                src="assets/images/footer-logo.svg"
+                alt="Green Plans Logo"
+                class="footer-logo-icon no-drag"
+              />
+            </div>
+            <p class="footer-description">
+              At Green Plans, we cultivate beauty through thoughtful landscaping
+              and dedicated experiences.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><img
+                  src="assets/icons/facebook.svg"
+                  alt="Facebook"
+                  class="no-drag"
+              /></a>
+              <a href="#" class="social-link"
+                ><img
+                  src="assets/icons/instagram.svg"
+                  alt="Instagram"
+                  class="no-drag"
+              /></a>
+              <a href="#" class="social-link"
+                ><img
+                  src="assets/icons/linkedIn.svg"
+                  alt="LinkedIn"
+                  class="no-drag"
+              /></a>
+            </div>
+          </div>
+
+          <div class="footer-links gsap-fade-up">
+            <div class="footer-column">
+              <div class="footer-column-header">
+                <h4>Quick Links</h4>
+                <button class="footer-toggle" data-target="quick-links">
+                  <span class="toggle-icon">+</span>
+                </button>
+              </div>
+              <ul class="footer-menu" id="quick-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-column-header">
+                <h4>Our Services</h4>
+                <button class="footer-toggle" data-target="our-services">
+                  <span class="toggle-icon">+</span>
+                </button>
+              </div>
+              <ul class="footer-menu" id="our-services">
+                <li><a href="#services">Landscape Design</a></li>
+                <li><a href="#services">Garden & Lawn Maintenance</a></li>
+                <li><a href="#services">Tree & Plant Care</a></li>
+                <li><a href="#services">Irrigation Solutions</a></li>
+                <li><a href="#services">Hardscaping</a></li>
+                <li><a href="#services">Maintenance Packages</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-column-header">
+                <h4>Contact Us</h4>
+                <button class="footer-toggle" data-target="contact-info">
+                  <span class="toggle-icon">+</span>
+                </button>
+              </div>
+              <div class="footer-contact" id="contact-info">
+                <div class="contact-item">
+                  <img
+                    src="assets/icons/location.svg"
+                    alt="Location"
+                    class="no-drag"
+                  />
+                  <span
+                    >Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem
+                    ipsum Dolor Sit Amet</span
+                  >
+                </div>
+                <div class="contact-item">
+                  <img
+                    src="assets/icons/phone.svg"
+                    alt="Phone"
+                    class="no-drag"
+                  />
+                  <span>+91 XXXXXXXXXX</span>
+                </div>
+                <div class="contact-item">
+                  <img
+                    src="assets/icons/mail.svg"
+                    alt="Email"
+                    class="no-drag"
+                  />
+                  <span>loremipsum@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Green Plans. All rights reserved.</p>
+          <p class="footer-credit">Web design by CLOUDE</p>
+        </div>
+      </div>
+
+      <section class="absolute-pattern">
+        <svg
+          width="354"
+          height="408"
+          viewBox="0 0 354 408"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M208.189 192.765C234.498 192.582 256.865 201.231 278.195 213.946C299.949 226.927 322.085 239.285 344.022 251.951L353.423 257.379C351.981 260.3 351.161 262.337 350.05 264.184C330.658 296.617 312.848 330.12 291.428 361.138C267.585 395.622 219.482 406.836 180.993 389.657C165.086 382.562 149.776 373.856 133.274 365.328C141.586 354.243 148.256 344.499 155.83 335.499C163.774 326.09 169.458 325.484 180.321 330.845C186.333 333.827 192.47 336.749 198.572 339.383C217.978 347.81 235.225 344.306 248.155 327.224C259.493 312.244 269.008 295.878 279.191 280.32C243.207 249.215 202.078 248.35 170.074 273.525C157.144 283.94 146.061 296.459 137.292 310.557C117.15 342.557 99.053 375.827 80.0558 408.577C69.0033 427.72 56.4207 431.652 36.7438 422.002C29.6401 418.523 23.025 414.082 15.2572 409.597L20.6632 400.233C34.7649 375.808 49.1167 351.528 62.8543 326.848C63.6863 325.007 64.1051 323.006 64.0815 320.985C64.0579 318.964 63.5924 316.973 62.7177 315.151C49.7216 293.853 35.9216 273.023 22.6479 251.897C0.991756 217.535 -7.03178 181.002 7.96722 142.012C16.7728 119.061 29.7367 98.3774 50.4965 84.0166C76.4784 65.9619 103.227 48.9275 129.036 30.5951C143.768 20.1297 157.276 7.93535 172.41 -4.34203C170.829 -4.7217 171.66 -4.77509 172 -4.4012C208.966 36.9345 195.81 46.1329 164.848 68.7322C145.702 82.6471 124.977 94.4067 106.419 108.995C93.9053 118.88 82.8824 130.517 73.6907 143.547C61.1445 161.429 59.7856 182.414 64.7927 203.499C69.4551 223.141 79.9902 239.886 91.7191 257.143C110.988 244.21 128.775 230.687 141.013 211.606C147.917 200.842 147.481 188.394 142.783 176.396C139.385 167.77 135.733 159.197 132.521 150.478C125.767 132.073 129.262 121.939 146.054 111.641C151.64 108.201 157.795 105.624 164.57 102.205C175.865 134.65 206.487 156.062 208.189 192.765Z"
+            fill="#FFFFFF05"
+            stroke="#FFFFFF05"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </section>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Register GSAP ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initContactAnimations();
+});
+
+function initContactAnimations() {
+  // Animate contact heading
+  gsap.to('.contact-heading', {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    ease: 'power2.out'
+  });
+
+  // Animate contact info items with stagger
+  gsap.to('.contact-info-item', {
+    opacity: 1,
+    x: 0,
+    duration: 0.6,
+    stagger: 0.2,
+    delay: 0.3,
+    ease: 'power2.out'
+  });
+
+  // Animate map
+  gsap.to('.contact-map', {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    delay: 0.9,
+    ease: 'power2.out'
+  });
+
+  // Animate form elements with stagger
+  gsap.to('.contact-form-group', {
+    opacity: 1,
+    x: 0,
+    duration: 0.6,
+    stagger: 0.1,
+    delay: 0.5,
+    ease: 'power2.out'
+  });
+
+  // Animate submit button
+  gsap.to('.contact-submit-btn', {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    delay: 1.2,
+    ease: 'power2.out'
+  });
+
+  // Add hover animations for form inputs
+  const inputs = document.querySelectorAll('.contact-input, .contact-textarea');
+  inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      gsap.to(this, {
+        scale: 1.02,
+        duration: 0.2,
+        ease: 'power2.out'
+      });
+    });
+
+    input.addEventListener('blur', function() {
+      gsap.to(this, {
+        scale: 1,
+        duration: 0.2,
+        ease: 'power2.out'
+      });
+    });
+  });
+
+  // Form submission with animation
+  const form = document.querySelector('.contact-form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Animate button on submit
+    gsap.to('.contact-submit-btn', {
+      scale: 0.95,
+      duration: 0.1,
+      yoyo: true,
+      repeat: 1,
+      ease: 'power2.out'
+    });
+
+    // Add your form submission logic here
+    console.log('Form submitted!');
+  });
+}
+
+// Scroll-triggered animations (if needed for longer pages)
+gsap.set('.contact-section', { opacity: 0, y: 50 });
+
+ScrollTrigger.create({
+  trigger: '.contact-section',
+  start: 'top 80%',
+  onEnter: () => {
+    gsap.to('.contact-section', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power2.out'
+    });
+  }
+});
+
+// Responsive animations
+function handleResize() {
+  ScrollTrigger.refresh();
+}
+
+window.addEventListener('resize', handleResize);
+    </script>
+  </body>
+</html>
