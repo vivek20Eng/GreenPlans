@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Services Swiper
     try {
       const servicesSwiper = new Swiper(".services-swiper", {
-        slidesPerView: 1,
+        slidesPerView: 1.2,
         spaceBetween: 30,
         loop: true,
         pagination: {
@@ -112,15 +112,15 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         breakpoints: {
           640: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
             spaceBetween: 30,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 3.2,
             spaceBetween: 30,
           },
         },
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Testimonials Swiper
     try {
       const testimonialsSwiper = new Swiper(".testimonials-swiper", {
-        slidesPerView: 1,
+        slidesPerView: 1.2,
         spaceBetween: 30,
         loop: true,
         pagination: {

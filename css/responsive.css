@@ -1,6 +1,15 @@
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+
+  .sm-none {
+  display: none;
+}
+.sm-show {
+  display: flex;
+}
+
+
   .hamburger {
     display: flex;
   }
@@ -24,17 +33,22 @@
   }
 
   .nav-menu.active {
-    left: 0;
+    left: -13px;
+    top: -20px;
   }
 
   .nav-container {
     padding: 15px;
   }
-
+.nav-links a {
+  font-size: 20px;
+}
   .logo-icon {
-    width: 6em;
+    width: 8em;
   }
-
+.nav-links {
+  gap: 20px;
+}
   .nav-links {
     flex-direction: column;
     text-align: center;
@@ -47,19 +61,26 @@
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
   }
 
   .section-title {
     font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
   }
 
   .story-content-plans {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+.story-content {
+      grid-template-columns: 1fr;
 
+}
   .story-text h2 {
     font-size: 2rem;
+    text-align: center;
   }
 
   .image-grid {
@@ -77,9 +98,12 @@
 
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 0px;
   }
 
+  .why-choose-us {
+    padding: 40px 0;
+  }
   .projects-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -252,6 +276,14 @@
     right: 60px;
   }
   /* CONTACT SECTION RESPONSIVE STYLES IN SERVICES DETAILS END */
+
+
+  .customer-info {
+    flex-direction: column;
+  }
+  .customer-photo {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -266,6 +298,7 @@
   .btn {
     padding: 12px 24px;
     font-size: 14px;
+    width: 100%;
   }
 
   .service-card {
@@ -273,23 +306,30 @@
   }
 
   .services {
-    padding: 60px 0;
+    padding: 40px 0;
   }
-
+.services-swiper.swiper-backface-hidden .swiper-slide {
+  margin-right: 20px !important;
+}
   .story {
-    padding: 60px 0;
+    padding: 40px 0;
   }
-
+.swiper-nav {
+  margin-top: 20px;
+}
+.services-swiper {
+  padding-bottom: 0;
+}
   .contact-form-wrapper h2 {
     font-size: 1.8rem;
   }
 
   .features-grid {
-    gap: 20px;
+    gap: 0px;
   }
 
   .feature-item {
-    padding: 20px;
+    padding: 0px 0 10px 0;
   }
 
   .projects-text h2 {

@@ -122,7 +122,12 @@ body {
   --lh-tight: 100%;
   --lh-relaxed: 160%;
 }
-
+.lg-none {
+  display: none;
+}
+.lg-show {
+  display: flex;
+}
 .title {
   font-family: var(--font-geist);
   font-weight: var(--geist-semibold);
@@ -237,13 +242,13 @@ body {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #333;
+  background: #719327;
   transition: all 0.3s ease;
   border-radius: 2px;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 3px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -679,6 +684,7 @@ body {
   color: #666;
   line-height: 1.6;
   font-family: var(--font-geist);
+  text-align: justify;
 }
 
 /* Testimonials Section Styles */
