@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const navbar = document.querySelector(".nav-container");
       if (navbar) {
         if (window.scrollY > 100) {
-          navbar.style.background = "rgba(255, 255, 255, 0.98)";
+          navbar.style.background = "rgba(255, 255, 255, 1)";
         } else {
           navbar.style.background = "rgba(255, 255, 255, 0.95)";
         }

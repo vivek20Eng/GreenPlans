@@ -123,7 +123,7 @@ body {
   --lh-relaxed: 160%;
 }
 .lg-none {
-  display: none;
+  display: none !important;
 }
 .lg-show {
   display: flex;
@@ -184,6 +184,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 2000;
 }
 
 .logo-icon {
@@ -448,6 +449,7 @@ body {
 
 .services-swiper {
   padding-bottom: 60px;
+  margin-top: 20px;
 }
 .services-swiper .swiper-pagination {
   display: none;
@@ -479,7 +481,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f0f8e8;
+  /* background: #f0f8e8; */
   border-radius: 10px;
 }
 
@@ -1022,7 +1024,7 @@ body {
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   font-family: var(--font-geist);
