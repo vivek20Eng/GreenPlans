@@ -534,3 +534,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // contact  js in service detail section end
+
+// index page project slider start
+ // Initialize Swiper for Projects section
+    const projectsSwiper = new Swiper('.projects-swiper', {
+      slidesPerView: 2.2, // Show 3 slides to match original grid
+      spaceBetween: 20, // Match original gap
+      loop: true, // Enable looping for continuous sliding
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        // Responsive adjustments
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2.3,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 2.3,
+          spaceBetween: 20,
+        },
+      },
+    });
+    // index section project slider end

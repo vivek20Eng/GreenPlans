@@ -448,7 +448,7 @@ body {
 }
 
 .services-swiper {
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   margin-top: 20px;
 }
 .services-swiper .swiper-pagination {
@@ -553,81 +553,128 @@ body {
 }
 
 /* Projects Section Styles */
-.projects {
-  padding: 40px 0;
-  background: #719327;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-.projects .absolute-pattern {
-  bottom: -10px;
-  left: 0;
-  z-index: 0;
-}
-/* .projects::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,50 Q30,30 50,50 Q70,70 90,50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>')
-    repeat;
-  opacity: 1;
-} */
+    .projects {
+      padding: 40px 0;
+      background: #719327;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
 
-.projects-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
+    .projects .absolute-pattern {
+      bottom: -10px;
+      left: 0;
+      z-index: 0;
+    }
 
-.projects-text h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-family: var(--font-geist);
-  line-height: 1.2;
-}
+    .projects-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
 
-.projects-text p {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
-  line-height: 1.6;
-  font-family: var(--font-geist);
-}
+    .projects-text h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-family: var(--font-geist);
+      line-height: 1.2;
+    }
 
-.projects-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+    .projects-text p {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      opacity: 0.9;
+      line-height: 1.6;
+      font-family: var(--font-geist);
+    }
 
-.project-item {
-  border-radius: 15px;
-  overflow: hidden;
-  height: 300px;
-  width: 300px;
-  position: relative;
+    .projects-gallery {
+      display: block; /* Changed from grid to support Swiper */
+    }
+.container-project-sec {
+  margin-left: 7rem;
 }
-.projects-text {
-  flex: 1;
-}
-.project-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
+    .project-item {
+      border-radius: 15px;
+      overflow: hidden;
+      height: 350px;
+      width: 100%;
+      position: relative;
+    }
 
-.project-item:hover img {
-  transform: scale(1.1);
+    .projects-text {
+      flex: 1;
+    }
+.projects-swiper .swiper-nav {
+  display: none !important;
 }
+    .project-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+.projects-swiper .swiper-pagination {
+  display: none !important;
+}
+    .project-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Swiper-specific styles */
+    .projects-swiper {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      max-width: 900px; /* Matches 3 items of 300px with gaps */
+    }
+
+    .projects-swiper.swiper-slide {
+      display: flex;
+      justify-content: center; /* Center the project-item in the slide */
+    }
+
+    .projects-swiper.swiper-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .projects-swiper.swiper-button-prev,
+    .projects-swiper.swiper-button-next {
+      color: white;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .projects-swiper.swiper-button-prev:after,
+    .projects-swiper.swiper-button-next:after {
+      font-size: 20px;
+    }
+
+    .projects-swiper.swiper-pagination {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .projects-swiper.swiper-pagination-bullet {
+      background: white;
+      opacity: 0.5;
+    }
+
+    .projects-swiper.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
 
 /* Why Choose Us Section Styles */
 .why-choose-us {
@@ -696,7 +743,7 @@ body {
 }
 
 .testimonials-swiper {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 .testimonials-swiper .swiper-pagination {
@@ -1119,6 +1166,7 @@ right: 5%;
 bottom: -50px;
 left: auto;
 height: 100%;
+overflow: hidden;
 }
 .mission-ptn.absolute-pattern img{
 
