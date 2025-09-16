@@ -11,6 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css"/>
     <style>
     
 
@@ -134,7 +135,7 @@
 
       @media (max-width: 768px) {
         .projects-grid {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 1fr;
           gap: 16px;
         }
 
@@ -148,18 +149,19 @@
         }
 
         .tabs-container {
-          flex-direction: column;
-          width: 200px;
+          /* flex-direction: column; */
+          /* width: 200px; */
           margin: 0 auto;
         }
 
         .tab-button {
           padding: 12px 20px;
-          border-radius: 8px;
+          border-radius: 30px;
+          width: 150px;
         }
 
         .tab-button.active {
-          border-radius: 8px;
+          /* border-radius: 8px; */
         }
       }
 
@@ -174,9 +176,10 @@
 
         .main-title {
           font-size: 1.6rem;
+          margin-bottom: 20px;
         }
 
-        .project-image {
+        .project-image ,.project-item{
           height: 180px;
         }
       }

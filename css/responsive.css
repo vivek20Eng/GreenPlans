@@ -190,7 +190,7 @@
   }
 
   .key-services-item-header {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
     /* padding: 10px; */
   }
@@ -200,12 +200,19 @@
   }
 
   .key-services-item.active .key-services-description {
-    padding: 0 10px 10px 10px;
+    padding: 0 10px 10px 0px;
   }
+.key-services-icon {
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+}
+
 
   .key-services-image {
     position: relative;
     top: 0;
+    margin-bottom: 30px;
   }
 
   .key-services-img {
@@ -240,6 +247,7 @@
   /* Faq Section responsive styles start */
   .faq-title {
     font-size: 2.5rem;
+    margin-bottom: 10px;
   }
   
   .faq-item-header {
@@ -247,9 +255,11 @@
   }
   
   .faq-number {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-right: 20px;
     min-width: 30px;
+    font-weight: 700;
+  font-family: var(--font-geist);
   }
   
   .faq-question {
@@ -275,7 +285,9 @@
   .contact-content {
     gap: 60px;
   }
-  
+  .contact-submit-btn {
+  width: 100%;
+}
   .contact-images {
     height: 400px;
   }
@@ -287,16 +299,17 @@
   
   .contact-image-2 {
     width: 280px;
-    height: 190px;
-    bottom: 60px;
-    left: 40px;
+        height: 170px;
+        bottom: 45px;
+        left: 0px;
+    
   }
   
   .contact-image-3 {
-    width: 170px;
-    height: 240px;
-    top: 100px;
-    right: 60px;
+    width: 80%;
+    /* height: auto; */
+    top: 0px;
+    right: 0px;
   }
   /* CONTACT SECTION RESPONSIVE STYLES IN SERVICES DETAILS END */
 
@@ -306,6 +319,9 @@
   }
   .customer-photo {
     width: 100%;
+  }
+  .service-contact-section {
+    padding: 40px 0;
   }
 }
 
@@ -331,6 +347,9 @@
   .services {
     padding: 40px 0;
   }
+  .service-detail-sec .services {
+  margin-top: 0px;
+}
 /* .services-swiper.swiper-backface-hidden .swiper-slide {
   margin-right: 20px !important;
 } */
@@ -404,7 +423,7 @@
 
 /* key services responsive styles start */
    .key-services-section {
-    padding: 60px 0;
+    padding: 50px 0 40px;
   }
 
   .key-services-title {
@@ -422,15 +441,18 @@
 
   /* Outdoor Fresh Responsive Styles start */
   .outdoor-fresh-section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
-
+.outdoor-fresh-image {
+  margin-bottom: 20px;
+}
   .outdoor-fresh-title {
     font-size: 1.8rem;
   }
 
   .outdoor-fresh-description {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    text-align: justify;
   }
 
   .outdoor-fresh-img {
@@ -440,7 +462,7 @@
 
   /* Faq Section responsive styles start */
   .faq-section {
-    padding: 60px 0;
+    padding: 0px 0;
   }
   
   .faq-title {
@@ -474,16 +496,24 @@
     width: 30px;
     height: 30px;
   }
-  
+  .faq-item {
+    padding-bottom: 0;
+  }
+  /* .faq-answer {
+    padding: 0 10px 10px 10px;
+  } */
   .faq-toggle-arrow {
     width: 10px;
     height: 10px;
   }
+  
+
   /* Faq Section responsive styles end */
 
   /* CONTACT SECTION RESPONSIVE STYLES IN SERVICES DETAILS START */
   .contact-title {
     font-size: 2rem;
+    text-align: center;
   }
   
   .contact-form-input,
@@ -497,10 +527,12 @@
   
   .contact-images {
     height: 280px;
-    max-width: 320px;
+    /* max-width: 320px; */
+    width: 100%;
+    position: relative;
   }
   
-  .contact-image-1 {
+  /* .contact-image-1 {
     width: 160px;
     height: 110px;
   }
@@ -517,7 +549,7 @@
     height: 160px;
     top: 60px;
     right: 30px;
-  }
+  } */
   /* CONTACT SECTION RESPONSIVE STYLES IN SERVICES DETAILS end */
 
 
