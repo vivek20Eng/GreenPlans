@@ -196,31 +196,67 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Navbar scroll effect
   const initNavbarScroll = () => {
+  let lastScrollY = window.scrollY;
+  const navbar = document.querySelector(".nav-container");
+
+  if (navbar) {
     window.addEventListener("scroll", () => {
-      const navbar = document.querySelector(".nav-container");
-      if (navbar) {
-        if (window.scrollY > 100) {
-          navbar.style.background = "rgba(255, 255, 255, 1)";
-        } else {
-          navbar.style.background = "rgba(255, 255, 255, 0.95)";
-        }
+      const currentScrollY = window.scrollY;
+
+      // Update background based on scroll position
+      if (currentScrollY > 100) {
+        navbar.style.background = "rgba(255, 255, 255, 1)";
+      } else {
+        navbar.style.background = "rgba(255, 255, 255, 0.95)";
       }
+
+      // Show/hide navbar based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scrolling down: hide navbar
+        gsap.to(navbar, {
+          y: "-150%",
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up: show navbar
+        gsap.to(navbar, {
+          y: "0",
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      }
+
+      lastScrollY = currentScrollY;
     });
-  };
+  }
+};
+
+// Initialize the function
+initNavbarScroll();
 
   // Hamburger menu toggle
   const initHamburgerMenu = () => {
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
     const navBackdrop = document.getElementById("nav-backdrop");
+    const body = document.body;
 
     if (hamburger && navMenu && navBackdrop) {
       hamburger.addEventListener("click", () => {
+        const isActive = hamburger.classList.contains("active");
+        
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
         navBackdrop.classList.toggle("active");
+        
+        // Toggle background scroll
+        if (!isActive) {
+          body.classList.add("nav-open");
+        } else {
+          body.classList.remove("nav-open");
+        }
       });
 
       // Close menu when clicking on nav links
@@ -229,6 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
           hamburger.classList.remove("active");
           navMenu.classList.remove("active");
           navBackdrop.classList.remove("active");
+          body.classList.remove("nav-open");
         });
       });
 
@@ -237,6 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
         navBackdrop.classList.remove("active");
+        body.classList.remove("nav-open");
       });
 
       // Close menu when clicking outside
@@ -245,6 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
           hamburger.classList.remove("active");
           navMenu.classList.remove("active");
           navBackdrop.classList.remove("active");
+          body.classList.remove("nav-open");
         }
       });
     }
