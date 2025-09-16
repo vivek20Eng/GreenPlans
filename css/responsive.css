@@ -573,6 +573,9 @@
   grid-template-columns: 1fr;
   gap: 20px;
 }
+.vision-image ,.mission-image{
+  margin-bottom: 20px;
+}
 .vision-title ,.mission-title{
   font-size: 2rem;
 }
@@ -580,7 +583,7 @@
   padding: 40px 0 0;
 }
 .mission-section {
-  padding: 40px 0;
+  padding: 20px 0 40px 0;
   margin-bottom: 0;
 }
 .vision-img,.mission-img {
